@@ -1,0 +1,15 @@
+openai
+streamlit
+streamlit-lottie
+python-dotenv
+PyPDF2
+rank_bm25
+nltk
+python-docx
+pdfplumber
+pytesseract
+pymupdf
+sentence-transformers
+Pillow
+python-dotenv
+python-pptx
