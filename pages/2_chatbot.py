@@ -84,6 +84,8 @@ if file and st.session_state.after_cleanup is False:
 
 st.session_state.after_cleanup = False
 
+top_k = st.sidebar.slider("Number of Top Relevant Chunks", min_value=1, max_value=20, value=2, step=1)
+
 # Sidebar: show all uploaded PDFs
 st.sidebar.subheader("Uploaded Documents")
 for document_name in st.session_state.document_chunks.keys():
@@ -142,7 +144,7 @@ if user_prompt := st.chat_input("What questions do you have about the document(s
 
         # Retrieve relevant chunks
     if combined_chunks:
-        retrieved_chunks = retrieve_relevant_chunks(combined_chunks, user_prompt)
+        retrieved_chunks = retrieve_relevant_chunks(combined_chunks, user_prompt, top_k=top_k)
         context = "\n\n".join(retrieved_chunks)
         print(f"Retrieved chunks: {len(retrieved_chunks)}")
         st.session_state.document_context =  {"role": "system", "content": f"This is relevant Document content:\n{context}"}

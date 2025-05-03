@@ -19,14 +19,13 @@ def chat(messages, pdf_context=None):
     try:
         client = OpenAI(
             api_key=API_KEY,
-            base_url="https://generativelanguage.googleapis.com/v1beta/"  # Update if needed
+            base_url="https://generativelanguage.googleapis.com/v1beta/"
         )
         print("Messages:", messages)
         completion = client.chat.completions.create(
-            model="gemini-2.0-flash",  # Update model name if needed
+            model="gemini-2.0-flash",  
             messages=messages,
             temperature=0,
-            max_tokens=200,
             stream=True
         )
         return completion
