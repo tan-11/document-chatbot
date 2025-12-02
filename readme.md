@@ -1,12 +1,15 @@
 # Document Chatbot
 
-A Streamlit-based chatbot that can read and answer questions based on uploaded file documents.
+A Streamlit-based chatbot that can read and answer questions from uploaded documents. It supports PDFs and text files and includes conversational memory to remember previous interactions.
 
 ## Features
 
 - Upload PDF or text documents
+- Handle uploaded documents
+- Select zero to many documents as question context
 - Ask questions about the documents
 - Get accurate answers using AI
+- Conversational memory for context-aware responses
 - Interactive web interface with Streamlit
 
 ## Installation
