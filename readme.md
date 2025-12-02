@@ -42,8 +42,7 @@ A Streamlit-based chatbot that can read and answer questions from uploaded docum
 ```markdown
 ## Notes
 
-- `.env` is not uploaded for security reasons. You must create it yourself.
-- Do not include your `venv/` folder in the repository. It's recommended to use `.gitignore` to exclude it.
+- API_KEY in `.env` is not provided for security reasons. You must replace it yourself.
 
 document-chatbot/
 │
@@ -52,7 +51,7 @@ document-chatbot/
 │   ├──	1_login.py
 │   └──	2_chatbot.py          
 ├──	helper/             #utility
-│   ├──	db_helper.py
+│   ├──	db_helper.py      
 │   ├──	document_helper.py
 │   └──	llm_helper.py
 ├── requirements.txt    #Python dependencies
