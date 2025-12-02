@@ -48,12 +48,12 @@ document-chatbot/
 │
 ├── HomePage.py         # Main Streamlit app
 ├── Page/               # streamlit pages
-│   ├──	1_login.py
+│   ├──	1_login.py  
 │   └──	2_chatbot.py          
 ├──	helper/             #utility
-│   ├──	db_helper.py      
-│   ├──	document_helper.py
-│   └──	llm_helper.py
+│   ├──	db_helper.py          #handle chat history and uploaded document
+│   ├──	document_helper.py    #handle text retrieval from documents, tokenization, chunking, retrive relavent chunks by BM25 and cosine similarity
+│   └──	llm_helper.py         #handle user conversation
 ├── requirements.txt    #Python dependencies
 ├──	 config.py
 └──	readme.md            
